@@ -1,7 +1,11 @@
 $PrimaryColor: #41ead4;
 $SecondryColor: #00c9e0;
 
+$LightPrimaryColor: #09f4f4;
+
 $White: #ffffff;
+
+$SectionsMaxWidth: 75%;
 
 @mixin largescreen {
   @media only screen and(min-width: 768px) {

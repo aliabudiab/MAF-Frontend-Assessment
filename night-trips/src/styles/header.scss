@@ -4,13 +4,14 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 999;
 
   .app-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    max-width: 80%;
+    max-width: $SectionsMaxWidth;
     margin: 0 auto;
 
     #appLogo {

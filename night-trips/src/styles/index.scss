@@ -1,0 +1,32 @@
+@font-face {
+  font-family: PlayFairBolded;
+  src: url("../assets/fonts/PlayfairDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: LarssitLight;
+  src: url("../assets/fonts/Larsseit-Light.ttf");
+}
+
+@font-face {
+  font-family: LarssitBold;
+  src: url("../assets/fonts/Larsseit-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "PlayFairBolded", sans-serif;
+}
+
+button {
+  font-family: "LarssitBold", sans-serif !important;
+}
+
+p,
+label {
+  font-family: "LarssitLight", sans-serif;
+}

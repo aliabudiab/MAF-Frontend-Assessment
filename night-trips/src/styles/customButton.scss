@@ -1,0 +1,25 @@
+@import "./variables.scss";
+
+.custom-button {
+  position: relative;
+  min-width: 155px;
+  height: 55px;
+  border-radius: 48px;
+  color: $White;
+  border: 0;
+  letter-spacing: 1px;
+  background-color: $SecondryColor;
+  box-shadow: 5px 15px 40px 0 rgba(0, 201, 224, 0.2);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    height: 2px;
+    width: 30px;
+    border-radius: 16px;
+    background-color: $White;
+    position: absolute;
+    margin-top: 6px;
+    right: -15px;
+  }
+}

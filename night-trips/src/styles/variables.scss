@@ -1,0 +1,10 @@
+$PrimaryColor: #41ead4;
+$SecondryColor: #00c9e0;
+
+$White: #ffffff;
+
+@mixin largescreen {
+  @media only screen and(min-width: 768px) {
+    @content;
+  }
+}

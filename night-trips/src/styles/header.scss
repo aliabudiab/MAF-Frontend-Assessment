@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+.app-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .app-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    max-width: 80%;
+    margin: 0 auto;
+
+    #appLogo {
+      font-size: 36px;
+      color: #ffffff;
+    }
+  }
+}

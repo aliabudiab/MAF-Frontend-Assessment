@@ -11,7 +11,8 @@
   background-color: $SecondryColor;
   box-shadow: 5px 15px 40px 0 rgba(0, 201, 224, 0.2);
   cursor: pointer;
-
+  text-transform: capitalize;
+  
   &::before {
     content: "";
     height: 2px;
@@ -21,5 +22,15 @@
     position: absolute;
     margin-top: 6px;
     right: -15px;
+  }
+
+  &:hover {
+    color: $SecondryColor;
+    border: 1px solid $SecondryColor;
+    background-color: transparent;
+
+    &::before {
+      background-color: $SecondryColor;
+    }
   }
 }

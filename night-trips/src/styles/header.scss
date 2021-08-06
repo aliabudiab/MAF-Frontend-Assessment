@@ -18,5 +18,15 @@
       font-size: 36px;
       color: #ffffff;
     }
+
+    .right-navbar {
+      display: flex;
+      align-items: center;
+      color: $White;
+
+      .menu .custom-button {
+        margin-left: 1rem;
+      }
+    }
   }
 }

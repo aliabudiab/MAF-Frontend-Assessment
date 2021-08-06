@@ -17,7 +17,7 @@ const Index = () => {
   ];
 
   return (
-    <section className="home-section" title="Home Section">
+    <section className="home-section" title="Home Section" id="home">
       <div className="content-wrapper">
         <h1>Night Trips</h1>
         <label>WE GOT TRIPS FOR THE TRIPPSTER IN YOU</label>
@@ -31,6 +31,7 @@ const Index = () => {
 
       <div className="linear-gradient-div">
         <div className="links-container">
+          {/*TODO: activate linkes */}
           <label className="scroll-label">SCROLL</label>
           <ul className="social-links-container">
             {socialItems.map((item, idx) => (

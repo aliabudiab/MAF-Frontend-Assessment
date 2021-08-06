@@ -1,12 +1,14 @@
 @import "../styles/variables.scss";
 
 .app-main {
+  //TODO: create a custom section
   .home-section {
     width: 100%;
     background-size: cover;
-    background-image: url(../assets/images/home-background-img.png);
+    background-image: url(../../public/assets/images/home-background-img.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-color: linear-gradient(to right, #2b58a1, #244b91, #244a92);
     position: relative;
     min-height: 120vh;
 
@@ -110,6 +112,65 @@
             list-style: none;
             color: $PrimaryColor;
             cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .trips-section {
+    width: 100%;
+    background-size: cover;
+    background-image: url(../../public/assets/images/trips-section-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: linear-gradient(to right, #2b58a1, #244b91, #244a92);
+    min-height: 100vh;
+    padding-bottom: 5rem; //Remove this
+
+    .section-content {
+      width: $SectionsMaxWidth;
+      margin: 0 auto;
+    }
+    .content-wrapper {
+      display: flex;
+      align-items: center;
+      padding-top: 4rem;
+
+      flex-wrap: wrap;
+
+      h1 {
+        font-size: 1.5rem;
+        color: $White;
+
+        @include largescreen {
+          font-size: 3rem;
+        }
+      }
+
+      .note-message {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+
+        .close-icon {
+          color: $PrimaryColor;
+          padding-right: 1rem;
+
+          @include largescreen {
+            padding: 0 1.5rem;
+          }
+        }
+
+        p {
+          font-size: 0.75rem;
+          color: $White;
+          text-align: justify;
+          max-width: 17rem;
+
+          @include largescreen {
+            font-size: 0.8rem;
+            max-width: 19rem;
           }
         }
       }

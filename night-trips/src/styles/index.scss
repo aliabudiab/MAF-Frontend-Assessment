@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 @font-face {
   font-family: PlayFairBolded;
   src: url("../../public/assets/fonts/PlayfairDisplay-Bold.ttf");
@@ -16,6 +18,15 @@
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+
+    &-thumb {
+      background: $SecondryColor;
+    }
+  }
 }
 
 h1,

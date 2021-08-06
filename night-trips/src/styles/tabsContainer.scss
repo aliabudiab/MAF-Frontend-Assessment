@@ -24,7 +24,7 @@
 
       &.active {
         font-size: 0.95rem;
-        color: $LightPrimaryColor;
+        color: $PrimaryColor;
         opacity: 1;
         position: relative;
         border: 0;
@@ -37,7 +37,7 @@
           border-radius: 13px;
           width: 100%;
           height: 4px;
-          background: $LightPrimaryColor;
+          background: $PrimaryColor;
         }
 
         @include largescreen {
@@ -103,7 +103,7 @@
             position: relative;
             font-size: 13px;
             font-weight: 700;
-            color: $LightPrimaryColor;
+            color: $PrimaryColor;
             letter-spacing: 2px;
             padding-top: 5px;
 
@@ -115,7 +115,7 @@
               left: 3px;
               top: -10px;
               border-radius: 1rem;
-              background-color: $LightPrimaryColor;
+              background-color: $PrimaryColor;
 
               @include largescreen {
                 width: 7rem;
@@ -131,7 +131,7 @@
               top: -5px;
               transform: rotate(90deg);
               border-radius: 1rem;
-              background-color: $LightPrimaryColor;
+              background-color: $PrimaryColor;
             }
 
             @include largescreen {
@@ -252,7 +252,7 @@
             width: 110%;
             bottom: 0;
             border-radius: 1rem;
-            background-color: $LightPrimaryColor;
+            background-color: $PrimaryColor;
           }
 
           &::after {
@@ -264,7 +264,7 @@
             bottom: 10px;
             transform: rotate(90deg);
             border-radius: 1rem;
-            background-color: $LightPrimaryColor;
+            background-color: $PrimaryColor;
           }
 
           @include largescreen {

@@ -1,0 +1,186 @@
+@import "../styles/variables.scss";
+
+.app-main {
+  .home-section {
+    width: 100%;
+    background-size: cover;
+    background-image: url(../../public/assets/images/home-background-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: linear-gradient(to right, #2b58a1, #244b91, #244a92);
+    position: relative;
+    min-height: 90vh;
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 8rem;
+
+      h1 {
+        font-size: 3rem;
+        color: $White;
+        margin-bottom: 0.5rem;
+
+        @include largescreen {
+          font-size: 6rem;
+          letter-spacing: -4px !important;
+        }
+      }
+
+      label {
+        font-size: 0.5rem;
+        color: $White;
+        font-weight: bold;
+        letter-spacing: 1px;
+
+        @include largescreen {
+          font-size: 0.8em;
+          letter-spacing: 2px;
+        }
+      }
+
+      p {
+        font-size: 0.75rem;
+        color: $White;
+        max-width: 16.5rem;
+        text-align: center;
+
+        @include largescreen {
+          font-size: 0.8rem;
+          max-width: 460px;
+        }
+      }
+
+      @include largescreen {
+        padding-top: 4rem;
+      }
+    }
+
+    .linear-gradient-div {
+      position: absolute;
+      bottom: -4rem;
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(
+        180deg,
+        rgba(1, 22, 39, 0) 0%,
+        #011627 76.64%,
+        #011627 100%
+      );
+
+      .links-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: $SectionsMaxWidth;
+        margin: 0 auto;
+
+        .scroll-label {
+          position: relative;
+          font-size: 0.9rem;
+          writing-mode: tb-rl;
+          color: $White;
+          letter-spacing: 1px;
+          transform: rotate(-180deg);
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 80px;
+            border-radius: 1rem;
+            background-color: $White;
+            margin-top: -3.5rem;
+            right: -1.9rem;
+            transform: rotate(-90deg);
+            background: linear-gradient(
+              $LighterPrimaryColor 0%,
+              $SecondryColor 100%
+            );
+          }
+        }
+
+        .social-links-container {
+          display: flex;
+          flex-direction: column;
+          padding-top: 1rem;
+          gap: 1rem;
+
+          .social-item {
+            list-style: none;
+            color: $PrimaryColor;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    @include largescreen {
+      min-height: 120vh;
+    }
+  }
+
+  .trips-section {
+    width: 100%;
+    background-size: cover;
+    background-image: url(../../public/assets/images/trips-section-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: linear-gradient(to right, #2b58a1, #244b91, #244a92);
+    padding-bottom: 1rem;
+
+    .content-wrapper {
+      width: $SectionsMaxWidth;
+      margin: 0 auto;
+
+      .header-container {
+        display: flex;
+        align-items: center;
+        padding-top: 4rem;
+        flex-wrap: wrap;
+
+        h1 {
+          font-size: 1.5rem;
+          color: $White;
+
+          @include largescreen {
+            font-size: 3rem;
+          }
+        }
+
+        .note-message-container {
+          display: flex;
+          align-items: center;
+          padding-top: 10px;
+
+          .close-icon {
+            color: $PrimaryColor;
+            padding-right: 1rem;
+
+            @include largescreen {
+              padding: 0 1.5rem;
+            }
+          }
+
+          p {
+            font-size: 0.75rem;
+            color: $White;
+            text-align: justify;
+            max-width: 17rem;
+
+            @include largescreen {
+              font-size: 0.8rem;
+              max-width: 19rem;
+            }
+          }
+        }
+      }
+    }
+
+    @include largescreen {
+      padding-bottom: 5rem;
+      min-height: 100vh;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import "../styles/index.scss";
 import "../styles/header.scss";
-import "../styles/home.scss";
+import "../styles/main.scss";
 import "../styles/customButton.scss";
 import "../styles/tabsContainer.scss";
 

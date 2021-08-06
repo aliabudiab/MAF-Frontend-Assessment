@@ -1,32 +1,81 @@
+import { useState } from "react";
 import CustomButton from "../customButton/customButton";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
 
 const TabContent = ({ currentTab }) => {
-  const { title, description1, description2 } = currentTab;
+  const { title, description1, description2, imgs } = currentTab;
 
-  //TODO: handle arrow actions
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const socialItems = [
+    {
+      path: "/",
+      icon: <FiInstagram size="22" />,
+    },
+    {
+      path: "/",
+      icon: <FiFacebook size="22" />,
+    },
+    {
+      path: "/",
+      icon: <FiTwitter size="22" />,
+    },
+  ];
+
+  // this function just to view the implementation of changing between 2 images.
+  const onArrowClick = () => {
+    if (currentImageIndex === 0) setCurrentImageIndex(1);
+    else if (currentImageIndex === 1) setCurrentImageIndex(0);
+  };
+
   return (
     <div className="tab-content-cotnainer">
-      <div className="images-part">
+      <div className="trip-images">
         <div className="image-container">
-          <img src="/assets/images/mountain1.jpg" alt="as" />
-          <div className="arrows-container">
-            <div className="arrow-icon left-arrow">
-              <AiOutlineArrowLeft size="17" onClick={() => {}} />
+          <img
+            src={imgs[currentImageIndex].path}
+            alt={imgs[currentImageIndex].name}
+          />
+          {imgs.length > 1 && (
+            <div className="arrows-container">
+              <div className="arrow-icon left-arrow" onClick={onArrowClick}>
+                <AiOutlineArrowLeft size="17" />
+              </div>
+              <div className="arrow-icon" onClick={onArrowClick}>
+                <AiOutlineArrowRight size="17" />
+              </div>
             </div>
-            <div className="arrow-icon">
-              <AiOutlineArrowRight size="17" onClick={() => {}} />
-            </div>
+          )}
+
+          <div className="image-details">
+            <label>{`0${currentImageIndex + 1}.`}</label>
+            <h3>{`${imgs[currentImageIndex].name} LANDSCAPE`}</h3>
           </div>
         </div>
       </div>
-      <div className="info-part">
-        <h2>{title}</h2>
-        <div className="description-container">
-          <p>{description1}</p>
-          <p>{description2}</p>
+
+      <div className="trip-details-container">
+        <div className="trip-details">
+          <h2>{title}</h2>
+          <div className="description-container">
+            <p>{description1}</p>
+            <p>{description2}</p>
+          </div>
+
+          <CustomButton text="See out latest offer" onClick={() => {}} />
         </div>
-        <CustomButton text="See out latest offer" onClick={() => {}} />
+
+        <div className="social-links-wrapper">
+          <label>SHARE IT: </label>
+          <ul className="social-links-list">
+            {socialItems.map((item, idx) => (
+              <li className="social-item" key={idx}>
+                {item.icon}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

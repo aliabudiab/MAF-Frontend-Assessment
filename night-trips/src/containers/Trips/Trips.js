@@ -5,11 +5,11 @@ import TabsContainer from "../../components/Elements/Tab/tabsContainer";
 const Trips = () => {
   return (
     <section className="trips-section" title="Trips Section" id="trips">
-      <div className="section-content">
-        <div className="content-wrapper">
+      <div className="content-wrapper">
+        <div className="header-container">
           <h1>Pick your trip</h1>
 
-          <div className="note-message">
+          <div className="note-message-container">
             {/*TODO: remove the message when the icon is clicked */}
             <AiOutlineClose size="16" className="close-icon" />
             <p>

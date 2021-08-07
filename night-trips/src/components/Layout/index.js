@@ -1,9 +1,10 @@
+import HeadComponent from "../Head/head";
 import Header from "./header";
 
 const Index = ({ children }) => {
   return (
     <>
-      {/*TODO: Add head with SEO's */}
+      <HeadComponent />
       <Header />
       <main className="app-main">{children}</main>
     </>

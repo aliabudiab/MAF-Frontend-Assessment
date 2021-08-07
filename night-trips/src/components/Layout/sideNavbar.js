@@ -1,22 +1,7 @@
 import { AiOutlineClose } from "react-icons/ai";
-import { FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
+import socialIcons from "../../../helpers/socialIcons";
 
 const SideNavbar = ({ isOpen, onMenuToggle }) => {
-  const socialItems = [
-    {
-      path: "/",
-      icon: <FiTwitter size="22" />,
-    },
-    {
-      path: "/",
-      icon: <FiInstagram size="22" />,
-    },
-    {
-      path: "/",
-      icon: <FiFacebook size="22" />,
-    },
-  ];
-
   return (
     <div
       tabIndex="-1"
@@ -39,7 +24,7 @@ const SideNavbar = ({ isOpen, onMenuToggle }) => {
 
                 <div className="social-links-list-container">
                   <ul className="social-links-list">
-                    {socialItems.map((item, idx) => (
+                    {socialIcons("20").map((item, idx) => (
                       <li className="social-link" key={idx}>
                         {item.icon}
                       </li>

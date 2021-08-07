@@ -1,21 +1,6 @@
-import { FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
+import socialIcons from "../../../helpers/socialIcons";
 
 const Index = () => {
-  const socialItems = [
-    {
-      path: "/",
-      icon: <FiTwitter size="22" />,
-    },
-    {
-      path: "/",
-      icon: <FiInstagram size="22" />,
-    },
-    {
-      path: "/",
-      icon: <FiFacebook size="22" />,
-    },
-  ];
-
   return (
     <section className="home-section" title="Home Section" id="home">
       <div className="content-wrapper">
@@ -34,7 +19,7 @@ const Index = () => {
           {/*TODO: activate linkes */}
           <label className="scroll-label">SCROLL</label>
           <ul className="social-links-container">
-            {socialItems.map((item, idx) => (
+            {socialIcons("22").map((item, idx) => (
               <li className="social-item" key={idx}>
                 {item.icon}
               </li>

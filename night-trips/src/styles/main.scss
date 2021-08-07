@@ -157,6 +157,7 @@
           .close-icon {
             color: $PrimaryColor;
             padding-right: 1rem;
+            cursor: pointer;
 
             @include largescreen {
               padding: 0 1.5rem;
@@ -174,6 +175,12 @@
               max-width: 19rem;
             }
           }
+        }
+
+        &.column-flex {
+          flex-direction: column;
+          justify-content: center;
+          align-items: unset;
         }
       }
     }

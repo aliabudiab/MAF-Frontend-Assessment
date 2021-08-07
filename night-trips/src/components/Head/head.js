@@ -39,6 +39,10 @@ const HeadComponent = () => {
       content: description,
     },
     {
+      name: "theme-color",
+      content: "#41ead4",
+    },
+    {
       name: "keywords",
       content: "NightTrips, nightTrips, ni8tTrips, نايت تريبس",
     },
@@ -47,6 +51,7 @@ const HeadComponent = () => {
   return (
     <Head>
       <title>{title}</title>
+      <link rel="manifist" href="/manifist.json" />
       <meta charSet="utf-8" />
       <base href="/" />
       {metaData.map(({ name, content }, idx) => (

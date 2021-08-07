@@ -1,0 +1,22 @@
+{
+    "name":"Night Trips",
+    "short_name":"NT",
+    "icons":[
+       {
+          "src":"/assets/images/icon_192x192.png",
+          "type":"image/png",
+          "sizes":"192x192"
+       },
+       {
+          "src":"/assets/images/icon_512x512.png",
+          "type":"image/png",
+          "sizes":"512x512"
+       }
+    ],
+    "theme_color":"#41ead4",
+    "background_color":"#41ead4",
+    "start_url":"/",
+    "prefer_related_applications":false,
+    "orientation":"portrait",
+    "display":"standalone"
+ }

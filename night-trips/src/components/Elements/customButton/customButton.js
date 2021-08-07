@@ -1,4 +1,4 @@
-const customButton = ({ text, onClick }) => {
+const CustomButton = ({ text, onClick }) => {
   return (
     <button className="custom-button" onClick={onClick}>
       {text}
@@ -6,4 +6,4 @@ const customButton = ({ text, onClick }) => {
   );
 };
 
-export default customButton;
+export default CustomButton;

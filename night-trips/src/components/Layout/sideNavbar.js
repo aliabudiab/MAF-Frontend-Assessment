@@ -18,15 +18,21 @@ const SideNavbar = ({ isOpen, onMenuToggle }) => {
             <div className="inner-content">
               <div className="menu-content-wrapper">
                 <div className="menu-list">
-                  <a>Home</a>
-                  <a>Trips</a>
+                  <a href="#home" onClick={onMenuToggle}>
+                    Home
+                  </a>
+                  <a href="#trips" onClick={onMenuToggle}>
+                    Trips
+                  </a>
                 </div>
 
                 <div className="social-links-list-container">
                   <ul className="social-links-list">
                     {socialIcons("20").map((item, idx) => (
                       <li className="social-link" key={idx}>
-                        {item.icon}
+                        <a href={item.path} target="_blank">
+                          {item.icon}
+                        </a>
                       </li>
                     ))}
                   </ul>

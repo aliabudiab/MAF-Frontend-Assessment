@@ -3,15 +3,15 @@ import { FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
 const socialIcons = (size) => {
   return [
     {
-      path: "/",
+      path: "https://twitter.com/majidalfuttaim?lang=en",
       icon: <FiTwitter size={size} />,
     },
     {
-      path: "/",
+      path: "https://www.instagram.com/majidalfuttaim/?hl=en",
       icon: <FiInstagram size={size} />,
     },
     {
-      path: "/",
+      path: "https://www.facebook.com/MajidAlFuttaim/",
       icon: <FiFacebook size={size} />,
     },
   ];

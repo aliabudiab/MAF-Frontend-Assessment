@@ -241,8 +241,11 @@
 
           .social-item {
             list-style: none;
-            color: $PrimaryColor;
             cursor: pointer;
+
+            a {
+              color: $PrimaryColor;
+            }
           }
 
           &::before {

@@ -78,6 +78,8 @@
           border-bottom: 1px solid rgb(232, 229, 229);
           transition: all 0.25s ease 0s;
           letter-spacing: 2px;
+          text-decoration: none;
+          color: #000;
 
           &:hover {
             color: $SecondryColor;
@@ -99,12 +101,15 @@
 
           .social-link {
             list-style: none;
-            color: #000;
             cursor: pointer;
-            transition: all 0.25s ease 0s;
 
-            &:hover {
-              color: $PrimaryColor;
+            a {
+              color: #000;
+              transition: all 0.25s ease 0s;
+
+              &:hover {
+                color: $PrimaryColor;
+              }
             }
           }
         }

@@ -76,7 +76,7 @@
         max-width: $SectionsMaxWidth;
         margin: 0 auto;
 
-        .scroll-label {
+        .scroll-link {
           position: relative;
           font-size: 0.9rem;
           writing-mode: tb-rl;
@@ -109,8 +109,11 @@
 
           .social-item {
             list-style: none;
-            color: $PrimaryColor;
             cursor: pointer;
+
+            a {
+              color: $PrimaryColor;
+            }
           }
         }
       }

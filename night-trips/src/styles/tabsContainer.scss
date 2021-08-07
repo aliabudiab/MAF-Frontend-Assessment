@@ -22,10 +22,6 @@
       opacity: 0.5;
       font-size: 0.9rem;
 
-      @media only screen and(max-width: 400px) and (max-height: 750px) {
-        font-size: 0.75rem;
-      }
-
       &.active {
         font-size: 0.95rem;
         color: $PrimaryColor;
@@ -44,13 +40,17 @@
           background: $PrimaryColor;
         }
 
-        @media only screen and(max-width: 400px) and (max-height: 750px) {
+        @include respond(customMedia, 400px, 750px) {
           font-size: 0.85rem;
         }
 
-        @include largescreen {
+        @include respond(largeScreen) {
           font-size: 1rem;
         }
+      }
+
+      @include respond(customMedia, 400px, 750px) {
+        font-size: 0.75rem;
       }
     }
   }
@@ -60,12 +60,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
-
-    @include largescreen {
-      flex-direction: row;
-      justify-content: center;
-      align-items: unset;
-    }
 
     .trip-images {
       flex: 1;
@@ -106,9 +100,7 @@
           position: absolute;
           top: 25%;
           left: -2rem;
-          @media only screen and(max-width: 340px) {
-            left: -1rem;
-          }
+
           label {
             position: relative;
             font-size: 13px;
@@ -127,7 +119,7 @@
               border-radius: 1rem;
               background-color: $PrimaryColor;
 
-              @include largescreen {
+              @include respond(largeScreen) {
                 width: 7rem;
               }
             }
@@ -144,7 +136,7 @@
               background-color: $PrimaryColor;
             }
 
-            @include largescreen {
+            @include respond(largeScreen) {
               font-size: 15px;
             }
           }
@@ -161,18 +153,22 @@
               letter-spacing: 2px;
             }
 
-            @include largescreen {
+            @include respond(largeScreen) {
               font-size: 1rem;
               max-width: 10rem;
             }
           }
 
-          @include largescreen {
+          @media only screen and(max-width: 340px) {
+            left: -1rem;
+          }
+
+          @include respond(largeScreen) {
             left: -4rem;
           }
         }
 
-        @include largescreen {
+        @include respond(largeScreen) {
           width: 80%;
         }
       }
@@ -197,12 +193,12 @@
           padding: 0;
           margin: 0;
 
-          @media only screen and(max-width: 400px) and (max-height: 750px) {
+          @include respond(customMedia, 400px, 750px) {
             font-size: 1.8rem;
           }
 
-          @include largescreen {
-            font-size: 3.6rem;
+          @include respond(largeScreen) {
+            font-size: 3.35rem;
           }
         }
 
@@ -214,11 +210,11 @@
             max-width: 410px;
             line-height: 20px;
 
-            @media only screen and(max-width: 400px) and (max-height: 750px) {
+            @include respond(customMedia, 400px, 750px) {
               font-size: 0.75rem;
             }
 
-            @include largescreen {
+            @include respond(largeScreen) {
               font-size: 0.9rem;
             }
           }
@@ -228,7 +224,7 @@
           width: 220px;
         }
 
-        @include largescreen {
+        @include respond(largeScreen) {
           max-height: 350px;
           gap: 1.5rem;
         }
@@ -289,12 +285,12 @@
             background-color: $PrimaryColor;
           }
 
-          @include largescreen {
+          @include respond(largeScreen) {
             justify-content: flex-start;
           }
         }
-        
-        @include largescreen {
+
+        @include respond(largeScreen) {
           position: absolute;
           align-items: unset;
           bottom: 0;
@@ -302,6 +298,12 @@
           margin-top: 0;
         }
       }
+    }
+
+    @include respond(largeScreen) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: unset;
     }
   }
 }

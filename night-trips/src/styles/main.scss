@@ -22,11 +22,11 @@
         color: $White;
         margin-bottom: 0.5rem;
 
-        @media only screen and(max-width: 400px) and (max-height: 750px) {
+        @include respond(customMedia, 400px, 750px) {
           font-size: 2rem;
         }
 
-        @include largescreen {
+        @include respond(largeScreen) {
           font-size: 6rem;
           letter-spacing: -4px !important;
         }
@@ -38,11 +38,11 @@
         font-weight: bold;
         letter-spacing: 1px;
 
-        @media only screen and(max-width: 400px) and (max-height: 750px) {
+        @include respond(customMedia, 400px, 750px) {
           font-size: 0.4rem;
         }
 
-        @include largescreen {
+        @include respond(largeScreen) {
           font-size: 0.8em;
           letter-spacing: 2px;
         }
@@ -54,19 +54,23 @@
         max-width: 16.5rem;
         text-align: center;
 
-        @media only screen and(max-width: 400px) and (max-height: 750px) {
+        @include respond(customMedia, 400px, 750px) {
           font-size: 0.7rem;
           max-width: 14rem;
         }
 
-        @include largescreen {
+        @include respond(largeScreen) {
           font-size: 0.8rem;
           max-width: 460px;
         }
       }
 
-      @include largescreen {
+      @include respond(largeScreen) {
         padding-top: 4rem;
+      }
+
+      @media only screen and(min-width: 1024px) and (min-height: 1300px) {
+        padding-top: 25rem !important;
       }
     }
 
@@ -112,12 +116,12 @@
               $SecondryColor 100%
             );
 
-            @media only screen and(max-width: 400px) and (max-height: 750px) {
+            @include respond(customMedia, 400px, 750px) {
               right: -2rem;
             }
           }
 
-          @media only screen and(max-width: 400px) and (max-height: 750px) {
+          @include respond(customMedia, 400px, 750px) {
             font-size: 0.8rem;
           }
         }
@@ -137,18 +141,18 @@
             }
           }
 
-          @media only screen and(max-width: 400px) and (max-height: 750px) {
+          @include respond(customMedia, 400px, 750px) {
             padding-top: 0.5rem;
           }
         }
       }
 
-      @media only screen and(max-width: 400px) and (max-height: 750px) {
+      @include respond(customMedia, 400px, 750px) {
         height: 250px;
       }
     }
 
-    @include largescreen {
+    @include respond(largeScreen) {
       min-height: 120vh;
     }
   }
@@ -176,11 +180,11 @@
           font-size: 1.5rem;
           color: $White;
 
-          @media only screen and(max-width: 400px) and (max-height: 750px) {
+          @include respond(customMedia, 400px, 750px) {
             font-size: 1.4rem;
           }
 
-          @include largescreen {
+          @include respond(largeScreen) {
             font-size: 3rem;
           }
         }
@@ -195,7 +199,7 @@
             padding-right: 1rem;
             cursor: pointer;
 
-            @include largescreen {
+            @media only screen and(min-width: 760px) {
               padding: 0 1.5rem;
             }
           }
@@ -206,12 +210,12 @@
             text-align: justify;
             max-width: 17rem;
 
-            @media only screen and(max-width: 400px) and (max-height: 750px) {
+            @media only screen and(max-width: 420px) {
               font-size: 0.7rem;
-              max-width: 12rem;
+              max-width: 14rem;
             }
 
-            @include largescreen {
+            @include respond(largeScreen) {
               font-size: 0.8rem;
               max-width: 19rem;
             }
@@ -225,12 +229,12 @@
         }
       }
 
-      @media only screen and(max-width: 400px) and (max-height: 750px) {
+      @include respond(customMedia, 400px, 750px) {
         width: 85%;
       }
     }
 
-    @include largescreen {
+    @include respond(largeScreen) {
       padding-bottom: 5rem;
       min-height: 100vh;
     }

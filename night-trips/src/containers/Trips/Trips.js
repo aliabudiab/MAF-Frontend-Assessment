@@ -8,7 +8,12 @@ const Trips = () => {
   const [showTeamMessage, setShowTeamMessage] = useState(true);
 
   return (
-    <section className="trips-section" title="Trips Section" id="trips">
+    <section
+      className="trips-section"
+      title="Trips Section"
+      id="trips"
+      aria-label="Black bakcground"
+    >
       <div className="content-wrapper">
         <div
           className={`header-container ${!showTeamMessage && "column-flex"}`}

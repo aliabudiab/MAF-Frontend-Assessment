@@ -2,7 +2,12 @@ import socialIcons from "../../../helpers/socialIcons";
 
 const Index = () => {
   return (
-    <section className="home-section" title="Home Section" id="home">
+    <section
+      className="home-section"
+      title="Home Section"
+      id="home"
+      aria-label="Blue sky with mountains"
+    >
       <div className="content-wrapper">
         <h1>Night Trips</h1>
         <label>WE GOT TRIPS FOR THE TRIPPSTER IN YOU</label>

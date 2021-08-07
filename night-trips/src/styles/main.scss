@@ -22,6 +22,10 @@
         color: $White;
         margin-bottom: 0.5rem;
 
+        @media only screen and(max-width: 400px) and (max-height: 750px) {
+          font-size: 2rem;
+        }
+
         @include largescreen {
           font-size: 6rem;
           letter-spacing: -4px !important;
@@ -34,6 +38,10 @@
         font-weight: bold;
         letter-spacing: 1px;
 
+        @media only screen and(max-width: 400px) and (max-height: 750px) {
+          font-size: 0.4rem;
+        }
+
         @include largescreen {
           font-size: 0.8em;
           letter-spacing: 2px;
@@ -45,6 +53,11 @@
         color: $White;
         max-width: 16.5rem;
         text-align: center;
+
+        @media only screen and(max-width: 400px) and (max-height: 750px) {
+          font-size: 0.7rem;
+          max-width: 14rem;
+        }
 
         @include largescreen {
           font-size: 0.8rem;
@@ -98,6 +111,14 @@
               $LightPrimaryColor 0%,
               $SecondryColor 100%
             );
+
+            @media only screen and(max-width: 400px) and (max-height: 750px) {
+              right: -2rem;
+            }
+          }
+
+          @media only screen and(max-width: 400px) and (max-height: 750px) {
+            font-size: 0.8rem;
           }
         }
 
@@ -115,7 +136,15 @@
               color: $PrimaryColor;
             }
           }
+
+          @media only screen and(max-width: 400px) and (max-height: 750px) {
+            padding-top: 0.5rem;
+          }
         }
+      }
+
+      @media only screen and(max-width: 400px) and (max-height: 750px) {
+        height: 250px;
       }
     }
 
@@ -147,6 +176,10 @@
           font-size: 1.5rem;
           color: $White;
 
+          @media only screen and(max-width: 400px) and (max-height: 750px) {
+            font-size: 1.4rem;
+          }
+
           @include largescreen {
             font-size: 3rem;
           }
@@ -173,6 +206,11 @@
             text-align: justify;
             max-width: 17rem;
 
+            @media only screen and(max-width: 400px) and (max-height: 750px) {
+              font-size: 0.7rem;
+              max-width: 12rem;
+            }
+
             @include largescreen {
               font-size: 0.8rem;
               max-width: 19rem;
@@ -185,6 +223,10 @@
           justify-content: center;
           align-items: unset;
         }
+      }
+
+      @media only screen and(max-width: 400px) and (max-height: 750px) {
+        width: 85%;
       }
     }
 

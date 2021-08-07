@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const HeadComponent = () => {
-  const title = "Night Trips Website";
+  const title = "Night Trips";
   const description =
     "Night trips, is a jordanian online travel agency for local trips reservations & other travel products.";
 

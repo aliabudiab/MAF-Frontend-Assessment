@@ -22,7 +22,11 @@
         color: $White;
         margin-bottom: 0.5rem;
 
-        @include largescreen {
+        @include respond(customMedia, 400px, 750px) {
+          font-size: 2rem;
+        }
+
+        @include respond(largeScreen) {
           font-size: 6rem;
           letter-spacing: -4px !important;
         }
@@ -34,7 +38,11 @@
         font-weight: bold;
         letter-spacing: 1px;
 
-        @include largescreen {
+        @include respond(customMedia, 400px, 750px) {
+          font-size: 0.4rem;
+        }
+
+        @include respond(largeScreen) {
           font-size: 0.8em;
           letter-spacing: 2px;
         }
@@ -46,14 +54,23 @@
         max-width: 16.5rem;
         text-align: center;
 
-        @include largescreen {
+        @include respond(customMedia, 400px, 750px) {
+          font-size: 0.7rem;
+          max-width: 14rem;
+        }
+
+        @include respond(largeScreen) {
           font-size: 0.8rem;
           max-width: 460px;
         }
       }
 
-      @include largescreen {
+      @include respond(largeScreen) {
         padding-top: 4rem;
+      }
+
+      @media only screen and(min-width: 1024px) and (min-height: 1300px) {
+        padding-top: 25rem !important;
       }
     }
 
@@ -76,7 +93,7 @@
         max-width: $SectionsMaxWidth;
         margin: 0 auto;
 
-        .scroll-label {
+        .scroll-link {
           position: relative;
           font-size: 0.9rem;
           writing-mode: tb-rl;
@@ -98,6 +115,14 @@
               $LightPrimaryColor 0%,
               $SecondryColor 100%
             );
+
+            @include respond(customMedia, 400px, 750px) {
+              right: -2rem;
+            }
+          }
+
+          @include respond(customMedia, 400px, 750px) {
+            font-size: 0.8rem;
           }
         }
 
@@ -109,14 +134,25 @@
 
           .social-item {
             list-style: none;
-            color: $PrimaryColor;
             cursor: pointer;
+
+            a {
+              color: $PrimaryColor;
+            }
+          }
+
+          @include respond(customMedia, 400px, 750px) {
+            padding-top: 0.5rem;
           }
         }
       }
+
+      @include respond(customMedia, 400px, 750px) {
+        height: 250px;
+      }
     }
 
-    @include largescreen {
+    @include respond(largeScreen) {
       min-height: 120vh;
     }
   }
@@ -144,7 +180,11 @@
           font-size: 1.5rem;
           color: $White;
 
-          @include largescreen {
+          @include respond(customMedia, 400px, 750px) {
+            font-size: 1.4rem;
+          }
+
+          @include respond(largeScreen) {
             font-size: 3rem;
           }
         }
@@ -159,7 +199,7 @@
             padding-right: 1rem;
             cursor: pointer;
 
-            @include largescreen {
+            @media only screen and(min-width: 760px) {
               padding: 0 1.5rem;
             }
           }
@@ -170,7 +210,12 @@
             text-align: justify;
             max-width: 17rem;
 
-            @include largescreen {
+            @media only screen and(max-width: 420px) {
+              font-size: 0.7rem;
+              max-width: 14rem;
+            }
+
+            @include respond(largeScreen) {
               font-size: 0.8rem;
               max-width: 19rem;
             }
@@ -183,9 +228,13 @@
           align-items: unset;
         }
       }
+
+      @include respond(customMedia, 400px, 750px) {
+        width: 85%;
+      }
     }
 
-    @include largescreen {
+    @include respond(largeScreen) {
       padding-bottom: 5rem;
       min-height: 100vh;
     }

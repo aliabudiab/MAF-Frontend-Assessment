@@ -15,10 +15,13 @@
   src: url("../../public/assets/fonts/Larsseit-Bold.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
     width: 0.5rem;
@@ -44,4 +47,8 @@ p,
 label,
 h3 {
   font-family: "LarssitLight", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }

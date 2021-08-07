@@ -40,9 +40,17 @@
           background: $PrimaryColor;
         }
 
-        @include largescreen {
+        @include respond(customMedia, 400px, 750px) {
+          font-size: 0.85rem;
+        }
+
+        @include respond(largeScreen) {
           font-size: 1rem;
         }
+      }
+
+      @include respond(customMedia, 400px, 750px) {
+        font-size: 0.75rem;
       }
     }
   }
@@ -52,12 +60,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
-
-    @include largescreen {
-      flex-direction: row;
-      justify-content: center;
-      align-items: unset;
-    }
 
     .trip-images {
       flex: 1;
@@ -117,7 +119,7 @@
               border-radius: 1rem;
               background-color: $PrimaryColor;
 
-              @include largescreen {
+              @include respond(largeScreen) {
                 width: 7rem;
               }
             }
@@ -134,7 +136,7 @@
               background-color: $PrimaryColor;
             }
 
-            @include largescreen {
+            @include respond(largeScreen) {
               font-size: 15px;
             }
           }
@@ -146,18 +148,27 @@
             color: $White;
             letter-spacing: 3px;
 
-            @include largescreen {
+            @media only screen and(max-width: 330px) {
+              font-size: 0.7rem;
+              letter-spacing: 2px;
+            }
+
+            @include respond(largeScreen) {
               font-size: 1rem;
               max-width: 10rem;
             }
           }
 
-          @include largescreen {
+          @media only screen and(max-width: 340px) {
+            left: -1rem;
+          }
+
+          @include respond(largeScreen) {
             left: -4rem;
           }
         }
 
-        @include largescreen {
+        @include respond(largeScreen) {
           width: 80%;
         }
       }
@@ -182,8 +193,12 @@
           padding: 0;
           margin: 0;
 
-          @include largescreen {
-            font-size: 3.6rem;
+          @include respond(customMedia, 400px, 750px) {
+            font-size: 1.8rem;
+          }
+
+          @include respond(largeScreen) {
+            font-size: 3.35rem;
           }
         }
 
@@ -195,7 +210,11 @@
             max-width: 410px;
             line-height: 20px;
 
-            @include largescreen {
+            @include respond(customMedia, 400px, 750px) {
+              font-size: 0.75rem;
+            }
+
+            @include respond(largeScreen) {
               font-size: 0.9rem;
             }
           }
@@ -205,7 +224,7 @@
           width: 220px;
         }
 
-        @include largescreen {
+        @include respond(largeScreen) {
           max-height: 350px;
           gap: 1.5rem;
         }
@@ -216,14 +235,6 @@
         flex-direction: column;
         align-items: flex-end;
         margin-top: 2rem;
-
-        @include largescreen {
-          position: absolute;
-          align-items: unset;
-          bottom: 0;
-          right: 0;
-          margin-top: 0;
-        }
 
         label {
           font-size: 13px;
@@ -241,8 +252,11 @@
 
           .social-item {
             list-style: none;
-            color: $PrimaryColor;
             cursor: pointer;
+
+            a {
+              color: $PrimaryColor;
+            }
           }
 
           &::before {
@@ -253,6 +267,10 @@
             bottom: 0;
             border-radius: 1rem;
             background-color: $PrimaryColor;
+
+            @media only screen and(max-width: 415px) {
+              width: 108%;
+            }
           }
 
           &::after {
@@ -267,11 +285,25 @@
             background-color: $PrimaryColor;
           }
 
-          @include largescreen {
+          @include respond(largeScreen) {
             justify-content: flex-start;
           }
         }
+
+        @include respond(largeScreen) {
+          position: absolute;
+          align-items: unset;
+          bottom: 0;
+          right: 0;
+          margin-top: 0;
+        }
       }
+    }
+
+    @include respond(largeScreen) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: unset;
     }
   }
 }

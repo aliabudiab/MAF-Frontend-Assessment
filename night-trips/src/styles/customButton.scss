@@ -3,7 +3,7 @@
 .custom-button {
   position: relative;
   min-width: 130px;
-  height: 55px;
+  min-height: 55px;
   border-radius: 48px;
   color: $White;
   border: 0;
@@ -36,7 +36,11 @@
     }
   }
 
-  @include largescreen {
+  @media only screen and(max-width: 400px) {
+    font-size: 0.7rem;
+  }
+
+  @include respond(largeScreen) {
     min-width: 155px;
     font-size: 0.9rem;
   }

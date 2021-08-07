@@ -7,8 +7,16 @@ $White: #ffffff;
 
 $SectionsMaxWidth: 75%;
 
-@mixin largescreen {
-  @media only screen and(min-width: 768px) {
-    @content;
+@mixin respond($breakpoint, $max-width: 400px, $max-hight: 750px) {
+  @if $breakpoint==customMedia {
+    @media (max-width: $max-width) and (max-height: $max-hight) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==largeScreen {
+    @media only screen and(min-width: 769px) {
+      @content;
+    }
   }
 }

@@ -10,15 +10,15 @@ const TabContent = ({ currentTab }) => {
 
   const socialItems = [
     {
-      path: "/",
+      path: "https://www.instagram.com/majidalfuttaim/?hl=en",
       icon: <FiInstagram size="22" />,
     },
     {
-      path: "/",
+      path: "https://www.facebook.com/MajidAlFuttaim/",
       icon: <FiFacebook size="22" />,
     },
     {
-      path: "/",
+      path: "https://twitter.com/majidalfuttaim?lang=en",
       icon: <FiTwitter size="22" />,
     },
   ];
@@ -71,7 +71,9 @@ const TabContent = ({ currentTab }) => {
           <ul className="social-links-list">
             {socialItems.map((item, idx) => (
               <li className="social-item" key={idx}>
-                {item.icon}
+                <a href={item.path} target="_blank">
+                  {item.icon}
+                </a>
               </li>
             ))}
           </ul>

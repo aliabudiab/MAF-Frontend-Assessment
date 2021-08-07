@@ -18,10 +18,10 @@ const SideNavbar = ({ isOpen, onMenuToggle }) => {
             <div className="inner-content">
               <div className="menu-content-wrapper">
                 <div className="menu-list">
-                  <a href="#home" onClick={onMenuToggle}>
+                  <a href="#home" rel="noreferrer" onClick={onMenuToggle}>
                     Home
                   </a>
-                  <a href="#trips" onClick={onMenuToggle}>
+                  <a href="#trips" rel="noreferrer" onClick={onMenuToggle}>
                     Trips
                   </a>
                 </div>
@@ -30,7 +30,7 @@ const SideNavbar = ({ isOpen, onMenuToggle }) => {
                   <ul className="social-links-list">
                     {socialIcons("20").map((item, idx) => (
                       <li className="social-link" key={idx}>
-                        <a href={item.path} target="_blank">
+                        <a href={item.path}  target="_blank" rel="noreferrer">
                           {item.icon}
                         </a>
                       </li>

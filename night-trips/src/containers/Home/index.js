@@ -22,13 +22,13 @@ const Index = () => {
       <div className="linear-gradient-div">
         <div className="links-container">
           {/*TODO: activate linkes */}
-          <a href="#trips" className="scroll-link">
+          <a href="#trips" className="scroll-link" rel="noreferrer">
             SCROLL
           </a>
           <ul className="social-links-container">
             {socialIcons("22").map((item, idx) => (
               <li className="social-item" key={idx}>
-                <a href={item.path} target="_blank">
+                <a href={item.path} target="_blank" rel="noreferrer">
                   {item.icon}
                 </a>
               </li>

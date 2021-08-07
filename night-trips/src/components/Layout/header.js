@@ -4,7 +4,7 @@ import { useState } from "react";
 import SideNavbar from "./sideNavbar";
 import { AiOutlineMenu } from "react-icons/ai";
 
-const header = () => {
+const Header = () => {
   const [openSideMenu, setOpenSideMenu] = useState(false);
 
   const onMenuToggle = () => {
@@ -32,4 +32,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

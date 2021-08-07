@@ -2,6 +2,7 @@ import { useState } from "react";
 import CustomButton from "../customButton/customButton";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
+import Image from "next/image";
 
 const TabContent = ({ currentTab }) => {
   const { title, description1, description2, imgs } = currentTab;
@@ -33,9 +34,10 @@ const TabContent = ({ currentTab }) => {
     <div className="tab-content-cotnainer">
       <div className="trip-images">
         <div className="image-container">
-          <img
+          <Image
             src={imgs[currentImageIndex].path}
             alt={imgs[currentImageIndex].name}
+            layout="fill"
           />
           {imgs.length > 1 && (
             <div className="arrows-container">
@@ -71,7 +73,7 @@ const TabContent = ({ currentTab }) => {
           <ul className="social-links-list">
             {socialItems.map((item, idx) => (
               <li className="social-item" key={idx}>
-                <a href={item.path} target="_blank">
+                <a href={item.path} target="_blank" rel="noreferrer">
                   {item.icon}
                 </a>
               </li>

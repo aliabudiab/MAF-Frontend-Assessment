@@ -37,6 +37,10 @@ const TabContent = ({ currentTab }) => {
           <Image
             src={imgs[currentImageIndex].path}
             alt={imgs[currentImageIndex].name}
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
             layout="fill"
           />
           {imgs.length > 1 && (

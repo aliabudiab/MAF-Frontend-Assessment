@@ -11,8 +11,8 @@
             "key":0
          },
          {
-            "name":"BROWN MOUNTAINS",
-            "path":"/assets/images/brownMountins.jpg",
+            "name":"DARK MOUNTAINS",
+            "path":"/assets/images/darkMountains.jpg",
             "key":1
          }
       ]
@@ -60,13 +60,13 @@
       "description2":" Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cumrutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.",
       "imgs":[
          {
-            "name":"SEA SKIING",
-            "path":"/assets/images/seaSkiing.jpg",
+            "name":"SEA SUNSHINE",
+            "path":"/assets/images/seaSunshine.jpg",
             "key":0
          },
          {
             "name":"SEA VIEW",
-            "path":"/assets/images/SeaView.jpg",
+            "path":"/assets/images/seaView.jpg",
             "key":0
          }
       ]
